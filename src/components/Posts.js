@@ -3,15 +3,16 @@ import { connect } from "react-redux";
 import { fetchPosts } from "../actions/postActions";
 
 const Posts = props => {
-  // console.log("props", this.props);
   useEffect(() => {
     props.fetchPosts();
   });
-
   return <div>Hi</div>;
 };
 
+const mapStateToProps = state => ({
+  posts: state.posts.items
+});
 export default connect(
-  null,
-  { fetchPosts }
+  mapStateToProps,
+  { fetchPosts: fetchPosts }
 )(Posts);
