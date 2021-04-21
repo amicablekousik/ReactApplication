@@ -3,10 +3,21 @@ import { connect } from "react-redux";
 import { fetchPosts } from "../actions/postActions";
 
 const Posts = props => {
-  useEffect(() => {
-    props.fetchPosts();
-  });
-  return <div>Hi</div>;
+  const [posts, setPosts] = useState([]);
+  // useEffect(() => {
+  //   props.fetchPosts();
+  // }, []);
+
+  // useEffect(() => {
+  //   if (props.posts && props.posts.length > 0) {
+  //     console.log("props.posts ", props.posts);
+  //   }
+  // }, [props.posts]);
+  return (
+    <div>
+      <h1>Posts</h1>
+    </div>
+  );
 };
 
 const mapStateToProps = state => ({
