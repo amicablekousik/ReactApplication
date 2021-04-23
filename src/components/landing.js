@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
+import logo from "../logo.svg";
+
 const Landing = props => {
   return (
     <div>
@@ -10,8 +11,10 @@ const Landing = props => {
         </header>
         <br />
       </div>
+      <br />
+      <br />
       <div>
-        <a href="/posts"> </a>
+        <a href="/posts">get Posts </a>
       </div>
     </div>
   );

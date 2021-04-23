@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import {
   Route,
-  Router,
+  BrowserRouter as Router,
   Switch,
   useHistory,
-  useLocation
+  useLocation,
+  createBrowserHistory
 } from "react-router-dom";
 
 import Landing from "../components/landing";
@@ -14,8 +15,8 @@ const Routes = () => {
   return (
     <Router history={history}>
       <switch>
-        <Route path="/" component={Landing} />
-        <Route path="/posts" component={Posts} />
+        <Route path="/" component={Landing} exact />
+        <Route path="/posts" component={Posts} exact />
       </switch>
     </Router>
   );

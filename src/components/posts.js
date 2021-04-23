@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchPosts } from "../actions/postActions";
-import Items from "./Items";
+import Items from "./items";
 
 const Posts = props => {
   useEffect(() => {
