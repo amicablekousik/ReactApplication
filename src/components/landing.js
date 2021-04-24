@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import logo from "../logo.svg";
+import { Link, useHistory } from "react-router-dom";
 
 const Landing = props => {
+  const history = useHistory();
+  const getPosts = () => {
+    history.push(`/posts`);
+  };
   return (
     <div>
       <div className="App">
@@ -14,7 +19,12 @@ const Landing = props => {
       <br />
       <br />
       <div>
-        <a href="/posts">get Posts </a>
+        {/* <a href="/posts" click={getPosts}>
+          get Posts{" "}
+        </a> */}
+        <a href="#" onClick={getPosts}>
+          get Posts{" "}
+        </a>
       </div>
     </div>
   );
